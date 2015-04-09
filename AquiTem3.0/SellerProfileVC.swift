@@ -39,6 +39,11 @@ class SellerProfileVC: UIViewController {
         let photoName = self.seller?.photo
         let photoView = UIImageView(image: photoName)
         photoView.frame = CGRect(x: 50, y: 100, width: 100, height: 100)
+        
+        photoView.layer.cornerRadius = photoView.frame.size.width / 2;
+        photoView.clipsToBounds = true
+        
+        
         view.addSubview(photoView)
     }
 
